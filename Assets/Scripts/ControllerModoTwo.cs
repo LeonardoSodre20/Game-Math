@@ -6,13 +6,17 @@ using UnityEngine.UI;
 public class ControllerModoTwo : MonoBehaviour
 {
     private float timerControllerRandomNumbers = 1.5f;
+    private float timerSpawnItem = 2f;
     private bool checkClickRandomButton = false;
     private int minValue = 1;
     private int maxValue = 11;
+    private int qtdBoxSpawned = 0;
     private int randomNumber;
     public Text txtRandomNumber;
+    public Text numberBoxDestroed;
     public GameObject spawnItem;
     public GameObject item;
+    public HudControllerModoTwo hudController;
 
     void Update()
     {
@@ -38,7 +42,22 @@ public class ControllerModoTwo : MonoBehaviour
 
         if(!GameObject.FindGameObjectWithTag("DragItem"))
         {
-            Instantiate(item, spawnItem.transform.position, spawnItem.transform.rotation);
+
+            timerSpawnItem -= Time.deltaTime;
+
+            if(timerSpawnItem < 0)
+            {
+                qtdBoxSpawned++;
+                numberBoxDestroed.text = qtdBoxSpawned.ToString();
+                Instantiate(item, spawnItem.transform.position, spawnItem.transform.rotation);
+                timerSpawnItem = 2f;
+            }
+        }
+
+        if((qtdBoxSpawned == randomNumber) && (qtdBoxSpawned != 0))
+        {
+            hudController.CheckVictorySystem();
+            
         }
     }
 

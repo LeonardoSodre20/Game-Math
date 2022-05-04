@@ -64,7 +64,11 @@
     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanAudio.cs" />
+    <Compile Include="Assets\Scripts\ControllerModoTwo.cs" />
+    <Compile Include="Assets\Scripts\LevelLoaderController.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
+    <Compile Include="Assets\Scripts\Drag.cs" />
+    <Compile Include="Assets\Scripts\ControllerToGame.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
     <Compile Include="Assets\Scripts\CanvasController.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\PathBezier.cs" />
@@ -89,10 +93,7 @@
     <Compile Include="Assets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\TestingRigidbodyCS.cs" />
     <Compile Include="Assets\LeanTween\Examples\Scripts\Following.cs" />
-    <Compile Include="Assets\Scripts\LevelLoaderController.cs" />
-    <Compile Include="Assets\Scripts\ControllerToGame.cs" />
-    <Compile Include="Assets\Scripts\ControllerModoTwo.cs" />
-    <Compile Include="Assets\Scripts\Drag.cs" />
+    <Compile Include="Assets\Scripts\HudControllerModoTwo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\LeanTween\ReadMe.txt" />
